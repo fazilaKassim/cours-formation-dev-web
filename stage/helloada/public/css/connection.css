@@ -1,0 +1,14 @@
+.google-img, .linkedin-img{
+    width: 40px;
+    height: 40px;
+    margin: 20px 20px 0;
+}
+
+.connexion{
+    height: calc(100vh - 360px);
+}
+
+
+form.connexion{
+    width: 50%;
+}

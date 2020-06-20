@@ -1,0 +1,125 @@
+ .contenu {
+     display: none
+ }
+
+ .plusieurs-contenus #candidat, .plusieurs-contenus #entreprise{
+     padding-top: 100px;
+ }
+
+ .contenu.active {
+     display: block;
+     padding: 20px;
+ }
+
+ .menu .active a {
+     background: white;
+     color: #8924AD;
+ }
+
+ .menu li a {
+     display: inline-block;
+     color: white;
+     padding: 10px 15px;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, .8)
+ }
+
+
+ ul.menu li {
+     float: left;
+     display: block;
+    background: #8924AD;
+    
+     /*    display: inline-block*/
+ }
+
+ ul.menu {
+     clear: both;
+     /*    neutralise les float */
+     display: table;
+     width: 1000px;
+     margin: 50px auto 0;
+     display: flex;
+     flex-direction: row;
+ }
+
+ .plusieurs-contenus {
+     position: relative;
+     padding: 20px;
+     box-shadow: 0 1px 3px rgba(0, 0, 0.8);
+     width: 1000px;
+     margin: auto
+ }
+
+ a {
+     text-decoration: none
+ }
+
+
+/* formulaire */
+
+.form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label, .check{
+    text-align: left;
+    width: 70%;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+}
+
+.input, .select{
+    width: 70%;
+    height: 30px;
+    border: 1px solid #8924AD;
+    border-radius: 5px;
+    padding: 0.5%;
+}
+
+.check .checkbox{
+    margin-left: 30px;
+}
+
+.check{
+    margin-top: 20px;
+}
+
+.btn{
+    width: 150px;
+    height: 35px;
+    border: none;
+    background: #8924AD;
+    border-radius: 5px;
+    color: white;
+    margin-top: 10px;
+}
+
+.valider{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 70%;
+    margin-top: 20px;
+}
+
+.valide{
+    margin-left: 10px;
+
+}
+
+.valider a{
+    color: #4361EE;
+}
+
+#pitch{
+    resize: none;
+    width: 70%;
+    height: 150px;
+    border: 1px solid #8924AD;
+    border-radius: 5px;
+    padding: 1%;
+}

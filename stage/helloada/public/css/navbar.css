@@ -1,0 +1,475 @@
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    transition: .5s;
+    /* padding: 40px; */
+    /* background: white; */
+    position: fixed;
+    z-index: 4;
+    /* border-bottom: 2px solid #8924AD; */
+    /* box-shadow: black 0 2px 2px; */
+}
+
+.logo {
+    padding: 30px;
+}
+
+.logo img{
+    width: 200px;
+    height: auto;
+}
+
+nav#navbar {
+    width: 60%;
+    height: auto;
+    position: fixed;
+    right: 0;
+    padding: 40px;
+
+}
+
+.menu-burger{
+    display: none;
+}
+
+ul#nav {
+width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+     align-items: center 
+
+} 
+
+ul#menu-deroulant {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.5%;
+}
+
+li.link,
+li.link-deroulant {
+    width: -1%;
+    height: auto;
+    display: inline-block;
+
+}
+
+li.link-deroulant a{
+    background: white;
+}
+
+li.derouler a{
+    background: none;
+}
+
+li.link a,
+li.link-deroulant a {
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    /*for capitalisation of letters */
+    left: auto;
+    /* background: white; */
+    padding-bottom: 10px;}
+
+#nav ul li {
+
+    display: inherit;
+  
+}
+
+#nav ul {
+    position: absolute;
+    left: -999em;
+    text-align: left;
+    z-index: 1000;
+}
+
+#nav li:hover ul {
+    left: auto;
+}
+
+/* #nav li a:hover {
+    border-bottom: 3px solid #8924AD;
+    transition: .5s;
+} */
+
+#menu-deroulant li {
+    margin-top: 30px;
+    /* background: white; */
+}
+
+#menu-deroulant li:first-of-type {
+    margin-top: 40px;
+}
+
+#menu-deroulant li:last-of-type {
+    margin-left: -5px;
+}
+
+
+
+header.white {
+    background: white;
+    height: 110px;
+    padding: 10px 50px;
+    /* border-bottom: 2px solid #8924AD; */
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background:#8924AD ;
+  height: 3px;
+
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+
+/* @media screen and (max-width:610px) {
+
+    header {
+        height: 650px;
+        width: 100%;
+       min-width:500px;
+        background-image: url(../img/trame.png);
+        padding: 50px 92px;
+        color: white;
+
+
+    }
+    nav {padding: 50px;
+        position: fixed;
+        height: 50%;
+        top: 0;
+        width:20%;
+      min-width: 200px;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, );
+        background: rgba(83, 83, 83,40%);
+
+    }
+     a#close {
+        color: white;
+        text-decoration: none;
+        display: block;
+        height: 50px;
+    }
+    
+     a#close::first-letter {
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    
+    nav#menu>ul>li>a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+     
+    }
+    
+    nav#menu>ul>li {
+        display: block;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        line-height: 50px;
+  
+    }
+    nav#menu:not(:target) {
+        right: -100%;
+        transition: right 1.5s;
+    }
+    
+    nav#menu:target {
+        right: 0;
+        transition: right 1.5s;
+    }
+
+
+  a img#burg {
+        width: 40px;
+        height: 40px;
+        top: -260px;
+        right: -300px;
+      margin-left: 230px;
+      position: relative;
+  }
+
+
+
+
+} */
+
+
+
+/* navbar js jeremy */
+
+
+@media screen and (max-width:768px) {
+
+    /* body{
+        overflow: hidden;
+    } */
+
+    #navbar{
+        display: none;
+    }
+
+    .is-active{
+        display: block;
+        z-index: 10;
+    }
+
+    header {
+        display: none;
+    }
+
+    .logo{
+        position: absolute;
+        z-index: 20;
+
+    }
+
+    .menu-burger{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* position: fixed; */
+    }
+
+    /* header.white {
+        display: none;
+    } */
+
+    .nav-links ul li{
+        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: calc(92vh / 5);
+     
+    }
+    
+    .nav-links {
+    position: absolute;
+        left: 0;
+        height: 92vh;
+        top: 8vh;
+        background: white;
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        width:100%;
+        transform: translateX(-100%);
+        transition: transform .5s ease-in-out;
+}
+
+.nav-links ul li a{
+    color: #8924AD;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.menu-burger #nav-burger ul li:hover{
+    background:  linear-gradient(304deg, rgba(58,12,163,1) 0%, rgba(137,36,173,1) 25%, rgba(137,36,173,1) 48%, rgba(137,36,173,1) 62%, rgba(58,12,163,1) 100%);
+    background-size: 400% 400%;
+    animation: degrade 5s ease-in-out infinite;
+}
+
+.menu-burger #nav-burger ul li:hover a{
+    color: white;
+}
+
+
+/* header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(341deg, rgba(58, 185, 175, 1) 0%, rgba(21, 33, 166, 1) 15%, rgba(37, 146, 208, 1) 27%, rgba(66, 175, 168, 1) 40%, rgba(0, 153, 233, 1) 55%, rgba(0, 85, 185, 1) 69%, rgba(47, 132, 230, 1) 81%, rgba(45, 126, 220, 1) 91%, rgba(23, 82, 151, 1) 99%);
+    background-size: 400% 400%;
+    animation: degrade 15s ease-in-out infinite;
+} */
+
+@keyframes degrade {
+
+    0%,
+    100% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#nav ul li {
+
+    display: inherit;
+  
+}
+
+#nav ul {
+    position: absolute;
+    left: -999em;
+    text-align: left;
+    z-index: 1000;
+}
+
+#nav li:not(hover) ul {
+    left: auto;
+}
+
+/* #nav li a:hover {
+    border-bottom: 3px solid #8924AD;
+    transition: .5s;
+} */
+
+/* #menu-deroulant li {
+    margin-top: 30px;
+    background: white;
+} */
+
+/* #menu-deroulant li:first-of-type {
+    
+} */
+/* 
+#menu-deroulant li:last-of-type {
+    margin-left: -5px;
+} */
+
+    .nav-active{
+        transform: translateX(0%)
+    }
+    
+    /* body{background: green;
+    overflow-x: hidden
+    } */
+
+    
+    .burger {
+        display: block;
+        width: 42px;
+        height: 42px;
+        position: relative;
+    }
+
+    .burger span {
+
+        width: 100%;
+        height: 4px;
+        background: black;
+        display: block;
+        position: absolute;
+        top: 50%;
+        top: 40px;
+        left: 10px;
+        transform: translateY(-50%)
+    }
+
+    .burger span::before,
+    .burger span::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background: #8924AD;
+        transition: background 1s ease-in-out;
+        transition: transform .5s ease-in-out
+    }
+
+    .burger span::before {
+        transform: translateY(-10px)
+    }
+
+    .burger span::after {
+        transform: translateY(10px)
+    }
+
+    
+/*premier span*/
+    .burger.active span::before {
+        transform: translateY(0px) rotateZ(45deg)
+    }
+/*2eme span*/            
+    .burger.active span {
+        background: transparent
+    }
+/*dernier span*/
+    .burger.active span::after {
+        transform: translateY(0px) rotateZ(-45deg)
+    }
+    
+    @keyframes navLinkFade{
+        from{opacity: 0;
+        transform: translateX(50px)}
+        
+        to{opacity: 1;
+        transform: translateX(0px)}
+    }
+}

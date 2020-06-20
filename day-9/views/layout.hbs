@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>{{title}}</title>
+  <meta name="HELLOADA"
+    content="">
+  <meta name="HELLOADA" content="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/css/style.css' />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+  <script type="module" src="/js/inscription.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  {{#each js}}
+  <script type="module" src="/js/{{this}}.js"></script>
+  {{/each}}
+</head>
+
+<body>
+  {{!-- <header>
+    <figure class="logo"><a href="/"><img src="/img/logo.PNG" alt=""></a></figure>
+    <nav id="navbar">
+      <ul id="nav">
+        <li class="link"><a href="/"></a></li>
+        <li class="link"><a href="/concept">Concept</a></li>
+        {{#unless isLoggedIn}}
+        <li class="link"><a href="/Connection">Se connecter</a>
+          <ul id="menu-deroulant"> 
+            <li class="link-deroulant"> <a href="/signinCandidat">Candidat</a></li>
+            <li class="link-deroulant"> <a href="/signinEntreprise">Entreprise</a></li>
+          </ul>
+        </li>
+        <li class="link"><a href="/signup">S'inscrire</a></li>
+        {{/unless}}
+        {{#if isLoggedIn}}
+            <li class="link"><a href="/profile" class="link is-clickable">profile</a></li>
+            {{#if isAdmin}}
+            <li class="link"><a href="/dashboard" class="link is-clickable">dashboard</a></li>
+            {{/if}}
+            <li class="link"><a href="/seDeconnecter" class="link is-clickable">Se déconnecter</a></li>
+            {{/if}}
+        {{!-- <li class="link"><a href="/se-deconnecter">Se deconnecter</a></li> --}}
+        
+  </ul>
+  </nav>
+  </header> --}}
+
+  {{{body}}}
+
+
+  <footer>
+    <section id="footer">
+      <article class="footer"> <a href="www.helloada.fr ">La communaut&eacute; HELLOADA</a> </article>
+      <article class="footer">
+        <ul>
+          <li><a href="/conditionUtilisation">Conditions d'utilisation</a></li>
+          <li><a href="/mentionLegal">Mentions legales</a></li>
+        </ul>
+      </article>
+      <article class="footer">
+        <ul>
+          <li>
+            <ul class="reseaux">
+              <li><a href="https://www.facebook.com/helloadatech/"><img src="/img/facebook.jpeg" alt="facebook"></a>
+              </li>
+              <li><a href="https://twitter.com/Helloadatech"><img src="/img/twitter.jpeg" alt="twitter"></a></li>
+              <li><a href="https://www.instagram.com/helloadatech/"><img src="/img/instagram.jpeg" alt="instagram"></a>
+              </li>
+              <li><a href="https://www.linkedin.com/company/helloada-tech/">
+              <img src="/img/linkedin.jpeg" alt="linkedin"></a></li>
+            </ul>
+          </li>
+          <li><a href="mailto:contact@helloada.fr">Contact</a></li>
+
+        </ul>
+      </article>
+    </section>
+
+  </footer>
+
+</body>
+
+</html>

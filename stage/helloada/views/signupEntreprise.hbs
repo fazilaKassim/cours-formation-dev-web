@@ -1,0 +1,92 @@
+<ul class="menu">
+    <li class="active"><a href="signup" id="btnC">Inscription Candidat</a></li>
+    <li><a href="signupEntreprise">Inscription Entreprise</a></li>
+</ul>
+
+
+<div class="plusieurs-contenus">
+    <div class="contenu" id="entreprise">
+
+
+        <form action="/signupEntreprise" method="post" enctype="multipart/form-data" class="form" id="formEntreprise">
+            <a class="google-btn" href="/auth/google"><img class="google-img" src="/img/google.png"
+                    alt="google">S'inscrire
+                avec google</a>
+            <a class="linkedin-btn" href="/auth/linkedin"><img class="linkedin-img" src="/img/linkedin.jpeg"
+                    alt="linkedin">S'inscrire avec linkedin</a>
+
+            <label class="label" for="input-name">Nom de l'entreprise</label>
+            <input id="input-entreprise" class="input" type="text" placeholder="Nom de l'entreprise"
+                name="nomEntreprise" value="test-user" />
+
+
+            <label class="label " for="tailleEntreprise">La taille</label>
+            <select name="tailleEntreprise" id="tailleEntreprise" class="select">
+                <optgroup label="taille" name="tailleEntreprise">
+                    <option value="micro" id="">Micro-entreprise</option>
+                    <option value="trespetite" id="">Très petite entreprise</option>
+                    <option value="petite" id="">Petite entreprise</option>
+                    <option value="moyenne" id="">Moyenne entreprise</option>
+                    <option value="grande" id="">Grande entreprise</option>
+                    <option value="tresgrande" id="">Très grande entreprise</option>
+                </optgroup>
+            </select>
+
+            <label class="label" for="input-secteur">Secteur d'activité</label>
+            <input id="input-secteur" class="input" type="text" placeholder="" name="secteurActivite"
+                value="test-secteur" />
+
+            <label class="label" for="pitch">Pitch</label>
+            <textarea name="pitch" id="pitch" cols="30" rows="10"></textarea>
+
+
+            <label for="ville" class="label">Ville</label>
+            <input type="text" id="ville" class="input" name="ville" value="aulnay">
+
+            <label for="codePostale" class="label">Code postal</label>
+            <input type="text" id="codePostale" class="input" name="codePostale">
+
+            <label for="poste" class="label">Les postes ouverts</label>
+            <input type="text" id="poste" class="input" name="poste">
+
+
+            <label for="niveauExperience" class="label">Niveau d'expèriences</label>
+            <select name="niveauExperience" id="niveauExperience" class="select">
+                <optgroup label="niveau" name="niveauExperience">
+                    <option value="stagiaires" id="">Stagiaires</option>
+                    <option value="juniors" id="">Juniors</option>
+                    <option value="experimentes" id="">Expérimentés</option>
+                </optgroup>
+            </select>
+
+            <label class="label" for="input-name">Votre Nom</label>
+            <input id="input-name" class="input" type="text" placeholder="Votre nom" name="nom" value="test-user" />
+
+            <label class="label" for="input-lastname">Votre Prénom</label>
+            <input id="input-lastname" class="input" type="text" placeholder="Votre Prénom" name="prenom"
+                value="test-user" />
+
+            <label class="label" for="input-email">Votre email</label>
+            <input id="input-email" class="input" type="email" placeholder="Votre email" name="email"
+                value="test@mail.com">
+
+            <label class="label" for="input-password">Votre mot de passe</label>
+            <input id="input-password" class="input" type="password" placeholder="assez complexe par mesure de sécurité"
+                name="password" value="fake-pass-12345">
+
+            <label class="label" for="input-password">Confimer le mot de passe</label>
+            <input id="passwordConfirme" class="input" type="password" placeholder="assez complexe par mesure de sécurité"
+                name="passwordConfirme" value="fake-pass-12345">
+
+            <div class="valider">
+                <input type="checkbox" id="conditions" name="conditions" checked>
+                <label for="cgv" class="valide">Valider les conditions <a href="">voir les conditions
+                        générales</a></label>
+            </div>
+            <button class="btn">S'inscrire</button>
+        </form>
+
+
+
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<h1 class="title">
+    <span>Manager les utilisateurs</span>
+    {{!-- <a href="/dashboard/create-user">
+        <i class="icon fa-sm fas fa-plus"></i>
+    </a> --}}
+</h1>
+<table class="tabler">
+    <thead>
+        <tr class="row">
+            <th class="cell">cv</th>
+            <th class="cell">nom</th>
+            <th class="cell">prenom</th>
+            <th class="cell">metier</th>
+            <th class="cell">typeContrat</th>
+            <th class="cell">ville</th>
+            <th class="cell">codePostale</th>
+            <th class="cell">secteurActiviteFav</th>
+            <th class="cell">langage de programmation</th>
+            <th class="cell">framework</th>
+            <th class="cell">linkedin</th>
+            <th class="cell">mail</th>
+            <th class="cell">role</th>
+            <th class="cell">edit</th>
+            <th class="cell">delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr class="row">
+            <td class="cell cv">
+                <img src="{{this.cv}}" alt="cv de {{this.nom}}">
+            </td>
+            <td class="cell">{{this.nom}}</td>
+            <td class="cell">{{this.prenom}}</td>
+            <td class="cell">{{this.metier}}</td>
+            <td class="cell">{{this.cdi}} <br> {{this.cdd}} <br> {{this.ctt}} <br> {{this.stage}} <br>
+                {{this.alternance}}</td>
+            <td class="cell">{{this.ville}}</td>
+            <td class="cell">{{this.codePostale}}</td>
+            <td class="cell">{{this.dev}} <br> {{this.data}} <br> {{this.cyber}} <br> {{this.system}} <br> {{this.maintenance}}<br> {{this.bureautique}} </td>
+            <td class="cell">{{this.cdiese}} <br> {{this.c}} <br> {{this.cplusplus}} <br> {{this.css}} <br>
+                {{this.html}} <br> {{this.go}} <br> {{this.java}} <br> {{this.javascript}} <br> {{this.objectivec}}<br>
+                {{this.php}} <br> {{this.python}} <br> {{this.r}} <br> {{this.ruby}} <br> {{this.shell}} <br>
+                {{this.swift}} <br> {{this.typescript}} </td>
+
+            <td class="cell">{{this.angularjs}} <br> {{this.react}} <br> {{this.vuejs}} <br> {{this.rubyr}} <br>
+                {{this.symphony}} <br> {{this.django}} <br> {{this.laravel}} <br> {{this.asp}} <br> {{this.meteor}}<br>
+                {{this.spring}} <br> {{this.electron}} <br> {{this.flutter}} <br> {{this.expressjs}} <br> {{this.cocoa}} </td>
+            <td class="cell">{{this.linkedin}}</td>
+            <td class="cell">{{this.email}}</td>
+            <td class="cell">{{this.role}}</td>
+            <td class="cell">
+                <a href="/dashboard/users/edit/{{this._id}}">
+                    <i class="icon far fa-edit"></i>
+                </a>
+            </td>
+            <td class="cell">
+                <form method="post" action="/users/delete/{{this._id}}">
+                    <button class="is-clickable">
+                        <i class="icon fas fa-trash"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

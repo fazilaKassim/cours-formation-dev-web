@@ -1,0 +1,6 @@
+a - express generator
+...
+c - get products bdd, plus afficher dans view
+d - modularisation avec les routers
+g - Finir le CRUD (delete puis update)
+

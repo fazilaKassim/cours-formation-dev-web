@@ -1,0 +1,163 @@
+<main>
+        {{> flashMessage}}
+
+  <ul class="menu">
+    <li class="active"><a href="#candidat" id="btnC">Inscription Candidat</a></li>
+    <li><a href="#entreprise">Inscription Entreprise</a></li>
+  </ul>
+
+  <div class="plusieurs-contenus">
+    <div class="contenu active" id="candidat">
+      <form action="/signup" method="post" enctype="multipart/form-data" class="form" id="formCandidat">
+        <h1 class="title">Inscription Candidat</h1>
+<a class="google-btn" href="/auth/linkedin"><img class="linkedin-img" src="/img/linkedin.jpeg" alt="linkedin">S'inscrire avec linkedin</a>
+
+        <label class="label" for="input-name">Nom</label>
+        <input id="input-name" class="input" type="text" placeholder="Votre nom" name="nom" value="test-user" />
+
+
+        <label class="label" for="input-lastname">Prénom</label>
+        <input id="input-lastname" class="input" type="text" placeholder="Votre Prénom" name="prenom"
+          value="test-user" />
+
+        <label class="label" for="input-metier">Métier</label>
+        <input id="input-metier" class="input" type="text" placeholder="Métier" name="metier" value="test-user" />
+
+        <div class="check">
+          <label class="label" for="input-contrat">Type de contrat</label>
+
+          <label for="html" class="checkbox">CDI</label>
+          <input type="checkbox" id="CDI" name="contrat">
+
+          <label for="css" class="checkbox">CDD</label>
+          <input type="checkbox" id="CDD" name="contrat">
+
+          <label for="js" class="checkbox">CTT</label>
+          <input type="checkbox" id="CTT" name="contrat">
+
+          <label for="js" class="checkbox">Stage</label>
+          <input type="checkbox" id="js" name="contrat">
+
+          <label for="js" class="checkbox">Alternance</label>
+          <input type="checkbox" id="js" name="contrat">
+
+        </div>
+
+        <label for="ville" class="label">Ville</label>
+        <input type="text" id="ville" class="input" name="ville" value="aulnay">
+
+        <label for="codePostale" class="label">Code postal</label>
+        <input type="text" id="codePostale" class="input" name="codePostale">
+
+        <label class="label" for="input-secteur">Secteur d'activité favoris</label>
+        <input id="input-secteur" class="input" type="text" placeholder="" name="secteurActivite"
+          value="test-secteur" />
+
+
+        <label class="label" for="input-cv">Ajouter votre CV</label>
+        <input id="input-cv" class="input" type="file" name="cv">
+
+        <label class="label" for="input-email">Votre email</label>
+        <input id="input-email" class="input" type="email" placeholder="Votre email" name="email" value="test@mail.com">
+
+        <label class="label" for="input-linkedin">Profil linkedin</label>
+        <input id="input-linkedin" class="input" type="text" placeholder="" name="linkedin" value="http://kzjl.fr">
+
+        <label class="label" for="input-password">Votre mot de passe</label>
+        <input id="input-password" class="input" type="password" placeholder="assez complexe par mesure de sécurité"
+          name="password" value="fake-pass-12345">
+
+        <label class="label" for="input-password">Confirmer le mot de passe</label>
+        <input id="input-password" class="input" type="password" placeholder="assez complexe par mesure de sécurité"
+          name="password" value="fake-pass-12345">
+
+        <div class="valider">
+          <input type="checkbox" id="conditions" name="conditions" checked>
+          <label for="cgv" class="valide">Valider les conditions <a href="">voir les conditions générales</a></label>
+        
+        </div>
+
+        <button class="btn">S'inscrire</button>
+      </form>
+    </div>
+
+    {{!-- <div class="contenu" id="entreprise">
+      <form action="/signup" method="post" enctype="multipart/form-data" class="form" id="formEntreprise">
+        <h1 class="title">Inscription Entreprise</h1>
+<a class="google-btn" href="/auth/linkedin"><img class="linkedin-img" src="/img/linkedin.jpeg" alt="linkedin">S'inscrire avec linkedin</a>
+<a class="google-btn" href="/auth/google"><img class="google-img" src="/img/google.png" alt="google">S'inscrire avec google</a>
+
+
+        <label class="label" for="input-name">Nom de l'entreprise</label>
+        <input id="input-entreprise" class="input" type="text" placeholder="Nom de l'entreprise" name="nomEntreprise"
+          value="test-user" />
+
+
+        <label class="label " for="tailleEntreprise">La taille</label>
+        <select name="tailleEntreprise" id="tailleEntreprise" class="select">
+          <optgroup label="taille" name="tailleEntreprise" >
+            <option value="micro" id="">Micro-entreprise</option>
+            <option value="trespetite" id="">Très petite entreprise</option>
+            <option value="petite" id="">Petite entreprise</option>
+            <option value="moyenne" id="">Moyenne entreprise</option>
+            <option value="grande" id="">Grande entreprise</option>
+            <option value="tresgrande" id="">Très grande entreprise</option>
+          </optgroup>
+        </select>
+
+        <label class="label" for="input-secteur">Secteur d'activité</label>
+        <input id="input-secteur" class="input" type="text" placeholder="" name="secteurActivite"
+          value="test-secteur" />
+
+        <label class="label" for="pitch">Pitch</label>
+        <textarea name="pitch" id="pitch" cols="30" rows="10"></textarea>
+
+
+        <label for="ville" class="label">Ville</label>
+        <input type="text" id="ville" class="input" name="ville" value="aulnay">
+
+        <label for="codePostale" class="label">Code postal</label>
+        <input type="text" id="codePostale" class="input" name="codePostale">
+
+        <label for="poste" class="label">Les postes ouverts</label>
+        <input type="text" id="poste" class="input" name="poste">
+
+
+        <label for="niveauExperience" class="label">Niveau d'expèriences</label>
+        <select name="niveauExperience" id="niveauExperience" class="select">
+          <optgroup label="niveau" name="niveauExperience">
+            <option value="stagiaires" id="">Stagiaires</option>
+            <option value="juniors" id="">Juniors</option>
+            <option value="experimentes" id="">Expérimentés</option>
+          </optgroup>
+        </select>
+
+        <label class="label" for="input-name">Votre Nom</label>
+        <input id="input-name" class="input" type="text" placeholder="Votre nom" name="nom" value="test-user" />
+
+        <label class="label" for="input-lastname">Votre Prénom</label>
+        <input id="input-lastname" class="input" type="text" placeholder="Votre Prénom" name="prenom"
+          value="test-user" />
+
+        <label class="label" for="input-email">Votre email</label>
+        <input id="input-email" class="input" type="email" placeholder="Votre email" name="email" value="test@mail.com">
+
+        <label class="label" for="input-password">Votre mot de passe</label>
+        <input id="input-password" class="input" type="password" placeholder="assez complexe par mesure de sécurité"
+          name="motDePasse" value="fake-pass-12345">
+
+        <label class="label" for="input-password">Confimer le mot de passe</label>
+        <input id="input-password" class="input" type="password" placeholder="assez complexe par mesure de sécurité"
+          name="motDePasse" value="fake-pass-12345">
+
+        <div class="valider">
+          <input type="checkbox" id="conditions" name="conditions" checked>
+          <label for="cgv" class="valide">Valider les conditions <a href="">voir les conditions générales</a></label>
+        </div>
+        <button class="btn">S'inscrire</button>
+      </form>
+    </div> --}}
+
+
+  </div>
+</main>

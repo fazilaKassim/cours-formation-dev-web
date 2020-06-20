@@ -1,0 +1,31 @@
+#accueil{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 200px);
+}
+
+.img-accueil img{
+    width: 300px;
+    height: auto;
+    margin-bottom: 300px;
+}
+
+.btn-accueil{
+    border: none;
+    color: white;
+    background: #8924AD;
+    width: 400px;
+    height: 150px;
+    font-size: 30px;
+    border-radius: 10px;
+    margin: 100px;
+}
+
+.home{
+    height: calc(100vh - 100px);
+    width: 100%;
+   
+}
