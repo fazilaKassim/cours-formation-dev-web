@@ -1,17 +1,17 @@
      
      <form action="/signinEntreprise" method="post" enctype="multipart/form-data" class="form connexion">
         <h1 class="title">Connexion Entreprise</h1>
+<div class="authentification-rs">
+ <a class="google-btn" href="/auth/google"><img class="google-img" src="/img/google.png" alt="google">Se connecter avec Google</a>
+ <span>ou </span>
+<a class="linkedin-btn" href="/auth/linkedin"><img class="linkedin-img" src="/img/linkedin.jpeg" alt="linkedin">Se connecter avec Linkedin</a></div>
 
- <a class="google-btn" href="/auth/google"><img class="google-img" src="/img/google.png" alt="google">Se connecter
-          avec google</a>
-<a class="linkedin-btn" href="/auth/linkedin"><img class="linkedin-img" src="/img/linkedin.jpeg" alt="linkedin">Se connecter avec linkedin</a>
 
+        <label class="label" for="input-email"></label>
+        <input id="input-email" class="input" type="email" placeholder=" Email" name="email">     
 
-        <label class="label" for="input-email">Votre email</label>
-        <input id="input-email" class="input" type="email" placeholder=" email" name="email">     
-
-        <label class="label" for="input-password">Votre mot de passe</label>
-        <input id="input-password" class="input" type="password" placeholder="mot de passe"
+        <label class="label" for="input-password"></label>
+        <input id="input-password" class="input" type="password" placeholder="Mot de passe"
           name="password">
      <span id="icon-toggle" >
             <i class="is-clickable fas fa-eye"></i>

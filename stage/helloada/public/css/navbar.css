@@ -256,6 +256,7 @@ nav.fill ul li a:hover:after {
 
 @media screen and (max-width:768px) {
 
+
     /* body{
         overflow: hidden;
     } */
@@ -276,7 +277,7 @@ nav.fill ul li a:hover:after {
     .logo{
         position: absolute;
         z-index: 20;
-
+background: white;
     }
 
     .menu-burger{
