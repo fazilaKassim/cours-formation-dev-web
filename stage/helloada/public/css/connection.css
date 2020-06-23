@@ -17,7 +17,7 @@
 }
 
 .connexion{
-    height: calc(100vh - 360px);
+    height: calc(100vh - 300px);
 }
 
 
@@ -35,13 +35,14 @@ form.connexion{
 }
 
 div.authentification-rs a{
-    width: 50%;
-    height: 50px;
+    width: 30%;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
     color: white;
+    text-align: center;
     line-height: 40px;
 font-weight: 600;
     border-radius: 10px;
@@ -56,6 +57,23 @@ font-weight: 600;
     background: rgb(202, 26, 20);
     /* border: 1px solid #8924AD ; */
 }
+
+div.trait{
+    display: flex;
+    flex-direction: row;
+    width:80%;
+    justify-content: center;
+    align-items: center;
+  margin-top: 30px;
+}
+
+div.trait hr{
+    width: 30%;
+    height: 1px;
+
+}
+div.trait-responsive{display: none;}
+
 /* div.authentification-rs{
     display: flex;
     flex-direction: row;
@@ -65,3 +83,124 @@ font-weight: 600;
 /* div.authentification-rs span{
     padding: 30px;
 } */
+@media screen and (min-width:415px) and (max-width: 1024px){
+    div.trait-responsive{display: none;}
+
+form div.authentification-rs{
+    width: 100%;
+height: 30px;
+margin-top: 30px;
+}
+
+
+div.authentification-rs a{
+ 
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    line-height: 40px;
+font-weight: 500;
+    border-radius: 10px;
+    margin:4px;
+    width:55%;
+    font-size: 14px;
+}
+.linkedin-img, .google-img{
+    width: 30px;
+    height: 30px;
+    margin-right: 3px;
+    margin-left: 3px;
+    /* border-radius: 10px; */
+}
+
+
+div.trait{
+    display: flex;
+    flex-direction: row;
+    width:80%;
+    justify-content: center;
+    align-items: center;
+  margin-top: 30px;
+  margin: 4%;
+}
+
+div.trait hr{
+    width: 10%;
+    height: 1px;
+
+}
+}
+
+@media screen and  (max-width: 414px){
+
+
+    .connexion{
+        height: calc(100vh);
+        width: 100%;
+    }
+    .form h1.title{
+        font-size: 20px;
+    }
+  div.trait{
+      display: none;
+  }
+div.trait-responsive{
+    display: flex;
+    flex-direction: row;
+    width:80%;
+    justify-content: center;
+    align-items: center;
+margin: 3%;
+
+}
+
+div.trait hr{
+    width:30%;
+    height: 1px;
+
+} 
+    
+form div.authentification-rs{
+    width: 100%;
+height: 30px;
+
+}
+
+div.authentification-rs a{
+ 
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    line-height: 40px;
+font-weight: 500;
+    border-radius: 10px;
+    margin:4px;
+    width:40px;
+    font-size: 14px;
+}
+.linkedin-img{
+    width: 30px;
+    height: 30px;
+padding: 0 ;
+margin: 2px;
+    /* border-radius: 10px; */
+}
+.google-img{
+    width: 20px;
+    height: 20px;
+
+margin: 2px;
+    /* border-radius: 10px; */
+}
+.text-hidden{
+    display: none;
+}
+
+
+}

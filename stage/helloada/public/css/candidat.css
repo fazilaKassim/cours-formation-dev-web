@@ -33,6 +33,7 @@ div.numero-parcours{
 div.container-etape {
     display: flex;
     flex-direction: row;
+
 }
 
 article.parcours {
@@ -90,3 +91,97 @@ align-items: center; */
     align-items: flex-end;
 
 } 
+@media screen and (max-width: 1024px){
+    #parcours-candidat {
+        width: 100%;
+      height: auto;
+        display: flex;
+        flex-direction: column;
+   
+    }
+    
+    .img-parcours {
+        width:100%;
+        height:200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+margin-top: 10vh;
+        align-items: center;
+    }
+    
+    .img-parcours img {
+        width: 100%;
+        height: auto;
+   
+    }
+      
+    article.parcours {
+        width: 100%;
+        height: auto;
+     flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    div.numero-parcours{
+        width: 40px;
+        height: 40px;
+        background: #8924AD;
+        color: white;
+        border-radius: 5px;
+     
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5px;
+        font-weight: bold;
+    }
+    
+    div.container-etape {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+    
+    }
+  
+    
+
+    
+    .container-etape h3 {
+        line-height: 50px;
+        width: 70%;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    
+    
+    
+    .btn-parcours {
+        width: 150px;
+        height: 40px;
+        /* color: white; */
+        background: #8924AD;
+        /* font-size: 30px; */
+        border: none;
+        border-radius: 10px;
+
+   
+    
+    } 
+    
+    .btn-parcours a{
+        color: white;
+        font-size: 18px;
+    }
+    
+    #btn-parcour {
+        width: 100%;
+        margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    } }

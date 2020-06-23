@@ -59,264 +59,271 @@
   </script>
 </head>
 
-
-<ul class="menu">
-  <li class="active"><a href="signup" id="btnC">Candidat</a></li>
-  <li><a href="signupEntreprise">Entreprise</a></li>
-</ul>
+<main class="signup-main">
+  <div class="signup-img">
 
 
-<div class="plusieurs-contenus">
-  <div class="contenu active" id="candidat">
+    <ul class="menu">
+      <li class="active"><a href="signup" id="btnC">Candidat</a></li>
+      <li><a href="signupEntreprise">Entreprise</a></li>
+    </ul>
 
-    <form method="post" action="/signup" class="form" enctype="multipart/form-data">
- <div class="authentification">
-      <a class="linkedin-btn" href="/auth/linkedin"><img class="linkedin-img" src="/img/linkedin.jpeg"
-          alt="linkedin">S'inscrire avec linkedin</a></div>
 
-      <label class="label" for="input-nom"></label>
-      <input id="input-nom" class="input" type="text" placeholder="Nom" name="nom" />
+    <div class="plusieurs-contenus">
+      <div class="contenu active" id="candidat">
 
-      <label class="label" for="input-prenom"></label>
-      <input id="input-prenom" class="input" type="text" placeholder="Prenom" name="prenom" />
+        <form method="post" action="/signup" class="form" enctype="multipart/form-data">
+          <div class="authentification">
+            <a class="linkedin-btn" href="/auth/linkedin"><img class="linkedin-img" src="/img/linkedin.jpeg"
+                alt="linkedin"> <span> S'inscrire avec linkedin</span></a></div>
 
-      <label class="label" for="input-metier"></label>
-      <input id="input-metier" class="input" type="text" placeholder="Votre métier" name="metier" />
+          <label class="label" for="input-nom"></label>
+          <input id="input-nom" class="input" type="text" placeholder="Nom" name="nom" />
 
-      <label for="langage" class="label"></label>
-      <div class="multiselect">
-        <div class="selectBox" onclick="showCheckboxes()">
-          <select>
-            <option class="opt">Langage de programmation</option>
-          </select>
-          <div class="overSelect"></div>
-        </div>
-        <div id="checkboxes">
+          <label class="label" for="input-prenom"></label>
+          <input id="input-prenom" class="input" type="text" placeholder="Prenom" name="prenom" />
 
-          <label for="cdiese">
-            <input type="checkbox" class="langage" value="cdiese" name="cdiese" id="cdiese" />C#</label>
+          <label class="label" for="input-metier"></label>
+          <input id="input-metier" class="input" type="text" placeholder="Votre métier" name="metier" />
 
-          <label for="c">
-            <input type="checkbox" class="langage" value="c" name="c" id="c" />C</label>
+          <label for="langage" class="label"></label>
+          <div class="multiselect">
+            <div class="selectBox" onclick="showCheckboxes()">
+              <select>
+                <option class="opt">Langage de programmation</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkboxes">
 
-          <label for="cplusplus">
-            <input type="checkbox" class="langage" value="cplusplus" name="cplusplus" id="cplusplus" />C++</label>
+              <label for="cdiese">
+                <input type="checkbox" class="langage" value="cdiese" name="cdiese" id="cdiese" />C#</label>
 
-          <label for="css">
-            <input type="checkbox" class="langage" value="CSS" name="CSS" id="css" />CSS</label>
+              <label for="c">
+                <input type="checkbox" class="langage" value="c" name="c" id="c" />C</label>
 
-          <label for="html">
-            <input type="checkbox" class="langage" value="html" name="html" id="html" />HTML</label>
+              <label for="cplusplus">
+                <input type="checkbox" class="langage" value="cplusplus" name="cplusplus" id="cplusplus" />C++</label>
 
-          <label for="go">
-            <input type="checkbox" class="langage" value="go" name="go" id="go" />Go</label>
+              <label for="css">
+                <input type="checkbox" class="langage" value="CSS" name="CSS" id="css" />CSS</label>
 
-          <label for="java">
-            <input type="checkbox" class="langage" value="java" name="java" id="java" />Java</label>
+              <label for="html">
+                <input type="checkbox" class="langage" value="html" name="html" id="html" />HTML</label>
 
-          <label for="jascript">
-            <input type="checkbox" class="langage" value="jascript" name="jascript" id="jascript" />Jascript</label>
+              <label for="go">
+                <input type="checkbox" class="langage" value="go" name="go" id="go" />Go</label>
 
-          <label for="objectivec">
-            <input type="checkbox" class="langage" value="objectivec" name="objectivec"
-              id="objectivec" />Objective-c</label>
+              <label for="java">
+                <input type="checkbox" class="langage" value="java" name="java" id="java" />Java</label>
 
-          <label for="php">
-            <input type="checkbox" class="langage" value="php" name="php" id="php" />Php</label>
+              <label for="jascript">
+                <input type="checkbox" class="langage" value="jascript" name="jascript" id="jascript" />Jascript</label>
 
-          <label for="python">
-            <input type="checkbox" class="langage" value="python" name="python" id="python" />Python</label>
+              <label for="objectivec">
+                <input type="checkbox" class="langage" value="objectivec" name="objectivec"
+                  id="objectivec" />Objective-c</label>
 
-          <label for="r">
-            <input type="checkbox" class="langage" value="r" name="r" id="r" />R</label>
+              <label for="php">
+                <input type="checkbox" class="langage" value="php" name="php" id="php" />Php</label>
 
-          <label for="ruby">
-            <input type="checkbox" class="langage" value="ruby" name="ruby" id="ruby" />Ruby</label>
+              <label for="python">
+                <input type="checkbox" class="langage" value="python" name="python" id="python" />Python</label>
 
-          <label for="shell">
-            <input type="checkbox" class="langage" value="ruby" name="ruby" id="shell" />Shell</label>
+              <label for="r">
+                <input type="checkbox" class="langage" value="r" name="r" id="r" />R</label>
 
-          <label for="swift">
-            <input type="checkbox" class="langage" value="swift" name="swift" id="swift" />Swift</label>
+              <label for="ruby">
+                <input type="checkbox" class="langage" value="ruby" name="ruby" id="ruby" />Ruby</label>
 
-          <label for="typescript">
-            <input type="checkbox" class="langage" value="typescript" name="typescript"
-              id="typescript" />TypeScript</label>
+              <label for="shell">
+                <input type="checkbox" class="langage" value="ruby" name="ruby" id="shell" />Shell</label>
 
-        </div>
+              <label for="swift">
+                <input type="checkbox" class="langage" value="swift" name="swift" id="swift" />Swift</label>
+
+              <label for="typescript">
+                <input type="checkbox" class="langage" value="typescript" name="typescript"
+                  id="typescript" />TypeScript</label>
+
+            </div>
+          </div>
+
+          <label for="langage" class="label"></label>
+          <div class="multiselect">
+            <div class="selectBox" onclick="showCheckboxe()">
+              <select>
+                <option>Framework</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkboxe">
+
+              <label for="angularjs">
+                <input type="checkbox" class="langage" value="angularjs" name="angularjs" id="angularjs" />Angular
+                JS</label>
+
+              <label for="react">
+                <input type="checkbox" class="langage" value="react" name="react" id="react" />React JS</label>
+
+              <label for="vuejs">
+                <input type="checkbox" class="langage" value="vuejs" name="vuejs" id="vuejs" />Vue JS</label>
+
+              <label for="rubyr">
+                <input type="checkbox" class="langage" value="rubyr" name="rubyr" id="rubyr" />Ruby on Rails</label>
+
+              <label for="symfony">
+                <input type="checkbox" class="langage" value="symfony" name="symfony" id="symfony" />Symfony</label>
+
+              <label for="django">
+                <input type="checkbox" class="langage" value="django" name="django" id="django" />Django</label>
+
+              <label for="laravel">
+                <input type="checkbox" class="langage" value="laravel" name="laravel" id="laravel" />Laravel</label>
+
+              <label for="asp">
+                <input type="checkbox" class="langage" value="asp" name="asp" id="asp" />ASP.net</label>
+
+              <label for="meteor">
+                <input type="checkbox" class="langage" value="meteor" name="meteor" id="meteor" />Meteor</label>
+
+              <label for="spring">
+                <input type="checkbox" class="langage" value="spring" name="spring" id="spring" />Spring</label>
+
+              <label for="electron">
+                <input type="checkbox" class="langage" value="electron" name="electron" id="electron" />Electron</label>
+
+              <label for="flutter">
+                <input type="checkbox" class="langage" value="flutter" name="flutter" id="flutter" />Flutter</label>
+
+              <label for="expressjs">
+                <input type="checkbox" class="langage" value="expressjs" name="expressjs" id="expressjs" />Express
+                JS</label>
+
+              <label for="cocoa">
+                <input type="checkbox" class="langage" value="cocoa" name="cocoa" id="cocoa" />Cocoa</label>
+            </div>
+          </div>
+
+
+
+
+
+          {{!-- ------------------------------------------------------------- --}}
+
+
+
+          <label for="langage" class="label"></label>
+          <div class="multiselect">
+            <div class="selectBox" onclick="showCheckbo()">
+              <select>
+                <option>Type de contrat</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkbo">
+
+              <label for="cdi">
+                <input type="checkbox" class="input-contrat" value="cdi" name="cdi" id="cdi" />CDI</label>
+
+              <label for="cdd">
+                <input type="checkbox" class="input-contrat" value="cdd" name="cdd" id="cdd" />CDD</label>
+
+              <label for="ctt">
+                <input type="checkbox" class="input-contrat" value="vuejs" name="ctt" id="ctt" />CTT</label>
+
+              <label for="stage">
+                <input type="checkbox" class="input-contrat" value="stage" name="stage" id="stage" />Stage</label>
+
+              <label for="alternance">
+                <input type="checkbox" class="input-contrat" value="alternance" name="alternance"
+                  id="alternance" />Alternance</label>
+
+            </div>
+          </div>
+
+
+
+
+
+
+          {{!-- ------------------------------------------------------------------------- --}}
+
+
+
+          <label for="ville" class="label"></label>
+          <input type="text" id="ville" class="input" name="ville" placeholder="Ville">
+
+          <label for="codePostale" class="label"></label>
+          <input type="text" id="codePostale" class="input" name="codePostale" placeholder="Code postal">
+
+          <label for="secteur" class="label"></label>
+          <div class="multiselect">
+            <div class="selectBox" onclick="showCheckbox()">
+              <select>
+                <option>Secteur d'activité</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkbox">
+
+              <label for="dev">
+                <input type="checkbox" class="secteur" value="dev" name="dev" id="dev" />Developpeuse Web</label>
+
+              <label for="data">
+                <input type="checkbox" class="secteur" value="data" name="data" id="data" />Data Analyst</label>
+
+              <label for="cyber">
+                <input type="checkbox" class="secteur" value="cyber" name="cyber" id="cyber" />Cyber Sécurité</label>
+
+              <label for="system">
+                <input type="checkbox" class="secteur" value="system" name="system" id="system" />System réseau</label>
+
+              <label for="maintenance">
+                <input type="checkbox" class="secteur" value="maintenance" name="maintenance"
+                  id="maintenance" />Maintenance
+                réseau</label>
+
+              <label for="bureautique">
+                <input type="checkbox" class="secteur" value="bureautique" name="bureautique"
+                  id="bureautique" />Bureautique</label>
+
+            </div>
+          </div>
+
+
+          <label class="label" for="input-email"></label>
+          <input id="input-email" class="input" type="email" placeholder="Votre email" name="email" placeholder="Email">
+
+          <label class="label" for="input-linkedin"></label>
+          <input id="input-linkedin" class="input" type="url" name="linkedin" placeholder="Profil linkedin">
+
+
+          <label class="label" for="input-password"></label>
+          <input id="input-password" class="input" type="password" placeholder="Mot de passe" name="password">
+
+          <label class="label" for="input-password"></label>
+          <input id="passwordConfirme" class="input" type="password" placeholder="confimer votre mot de passe"
+            name="passwordConfirme">
+
+          <label class="label" for="input-cv" style="font-weight: 500;">Ajouter votre CV :
+            <input id="input-cv" class="input" type="file" name="cv" placeholder="Ajouter votre CV"
+              value="Ajouter votre CV" title="Choose a video please"></label>
+
+          <div class="valider">
+            <input type="checkbox" id="conditions" name="conditions" checked>
+            <label for="cgv" class="valide"> <a href="">voir les conditions générales</a></label>
+          </div>
+          <button class="btn">S'inscrire</button>
+
+
+
+        </form>
+
       </div>
 
-      <label for="langage" class="label"></label>
-      <div class="multiselect">
-        <div class="selectBox" onclick="showCheckboxe()">
-          <select>
-            <option>Framework</option>
-          </select>
-          <div class="overSelect"></div>
-        </div>
-        <div id="checkboxe">
-
-          <label for="angularjs">
-            <input type="checkbox" class="langage" value="angularjs" name="angularjs" id="angularjs" />Angular
-            JS</label>
-
-          <label for="react">
-            <input type="checkbox" class="langage" value="react" name="react" id="react" />React JS</label>
-
-          <label for="vuejs">
-            <input type="checkbox" class="langage" value="vuejs" name="vuejs" id="vuejs" />Vue JS</label>
-
-          <label for="rubyr">
-            <input type="checkbox" class="langage" value="rubyr" name="rubyr" id="rubyr" />Ruby on Rails</label>
-
-          <label for="symfony">
-            <input type="checkbox" class="langage" value="symfony" name="symfony" id="symfony" />Symfony</label>
-
-          <label for="django">
-            <input type="checkbox" class="langage" value="django" name="django" id="django" />Django</label>
-
-          <label for="laravel">
-            <input type="checkbox" class="langage" value="laravel" name="laravel" id="laravel" />Laravel</label>
-
-          <label for="asp">
-            <input type="checkbox" class="langage" value="asp" name="asp" id="asp" />ASP.net</label>
-
-          <label for="meteor">
-            <input type="checkbox" class="langage" value="meteor" name="meteor" id="meteor" />Meteor</label>
-
-          <label for="spring">
-            <input type="checkbox" class="langage" value="spring" name="spring" id="spring" />Spring</label>
-
-          <label for="electron">
-            <input type="checkbox" class="langage" value="electron" name="electron" id="electron" />Electron</label>
-
-          <label for="flutter">
-            <input type="checkbox" class="langage" value="flutter" name="flutter" id="flutter" />Flutter</label>
-
-          <label for="expressjs">
-            <input type="checkbox" class="langage" value="expressjs" name="expressjs" id="expressjs" />Express
-            JS</label>
-
-          <label for="cocoa">
-            <input type="checkbox" class="langage" value="cocoa" name="cocoa" id="cocoa" />Cocoa</label>
-        </div>
-      </div>
 
 
-
-
-
-      {{!-- ------------------------------------------------------------- --}}
-
-
-
-      <label for="langage" class="label"></label>
-      <div class="multiselect">
-        <div class="selectBox" onclick="showCheckbo()">
-          <select>
-            <option>Type de contrat</option>
-          </select>
-          <div class="overSelect"></div>
-        </div>
-        <div id="checkbo">
-
-          <label for="cdi">
-            <input type="checkbox" class="input-contrat" value="cdi" name="cdi" id="cdi" />CDI</label>
-
-          <label for="cdd">
-            <input type="checkbox" class="input-contrat" value="cdd" name="cdd" id="cdd" />CDD</label>
-
-          <label for="ctt">
-            <input type="checkbox" class="input-contrat" value="vuejs" name="ctt" id="ctt" />CTT</label>
-
-          <label for="stage">
-            <input type="checkbox" class="input-contrat" value="stage" name="stage" id="stage" />Stage</label>
-
-          <label for="alternance">
-            <input type="checkbox" class="input-contrat" value="alternance" name="alternance"
-              id="alternance" />Alternance</label>
-
-        </div>
-      </div>
-
-
-
-
-
-
-      {{!-- ------------------------------------------------------------------------- --}}
-
-
-
-      <label for="ville" class="label"></label>
-      <input type="text" id="ville" class="input" name="ville" placeholder="Ville">
-
-      <label for="codePostale" class="label"></label>
-      <input type="text" id="codePostale" class="input" name="codePostale" placeholder="Code postal">
-
-      <label for="secteur" class="label"></label>
-      <div class="multiselect">
-        <div class="selectBox" onclick="showCheckbox()">
-          <select>
-            <option>Secteur d'activité</option>
-          </select>
-          <div class="overSelect"></div>
-        </div>
-        <div id="checkbox">
-
-          <label for="dev">
-            <input type="checkbox" class="secteur" value="dev" name="dev" id="dev" />Developpeuse Web</label>
-
-          <label for="data">
-            <input type="checkbox" class="secteur" value="data" name="data" id="data" />Data Analyst</label>
-
-          <label for="cyber">
-            <input type="checkbox" class="secteur" value="cyber" name="cyber" id="cyber" />Cyber Sécurité</label>
-
-          <label for="system">
-            <input type="checkbox" class="secteur" value="system" name="system" id="system" />System réseau</label>
-
-          <label for="maintenance">
-            <input type="checkbox" class="secteur" value="maintenance" name="maintenance" id="maintenance" />Maintenance
-            réseau</label>
-
-          <label for="bureautique">
-            <input type="checkbox" class="secteur" value="bureautique" name="bureautique"
-              id="bureautique" />Bureautique</label>
-
-        </div>
-      </div>
-
-    
-      <label class="label" for="input-email"></label>
-      <input id="input-email" class="input" type="email" placeholder="Votre email" name="email" placeholder="Email">
-
-      <label class="label" for="input-linkedin"></label>
-      <input id="input-linkedin" class="input" type="url" name="linkedin" placeholder="Profil linkedin">
-
-
-      <label class="label" for="input-password"></label>
-      <input id="input-password" class="input" type="password" placeholder="Mot de passe" name="password">
-
-      <label class="label" for="input-password"></label>
-      <input id="passwordConfirme" class="input" type="password" placeholder="confimer votre mot de passe"
-        name="passwordConfirme">
-
-  <label class="label" for="input-cv" style="font-weight: 500;">Ajouter votre CV :
-      <input id="input-cv" class="input" type="file" name="cv" placeholder="Ajouter votre CV" value="Ajouter votre CV"  title = "Choose a video please"></label>
-
-      <div class="valider">
-        <input type="checkbox" id="conditions" name="conditions" checked>
-        <label for="cgv" class="valide"> <a href="">voir les conditions générales</a></label>
-      </div>
-      <button class="btn">S'inscrire</button>
-
-
-
-    </form>
-
+    </div>
   </div>
-
-
-
-</div>
+</main>

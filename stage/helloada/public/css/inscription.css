@@ -26,7 +26,7 @@
  }
 
  .form .authentification a.linkedin-btn, .form .authentification a.google-btn{
-    width: 40%;
+    width: 50%;
     height: 50px;
     display: flex;
     flex-direction: row;
@@ -91,6 +91,7 @@ font-weight: 600;
      box-shadow: 0 1px 3px rgba(0, 0, 0.8);
      width: 60%;
      margin: auto;
+     background: white;
      /* border-radius: 10px; */
  }
 
@@ -248,11 +249,21 @@ select{
      margin: 5px;
  }
 
+.signup-main{
+    background-image: url(/img/back.png);
+    background-size: cover;
+    width: 100%;
+    height: auto;
 
-@media screen and (min-width: 600px) and (max-width: 1024px){
+    /* height: 100vh; */
+    /* position: fixed; */
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
    
-    .form .authentification a.linkedin-btn{
-        width: 43%;
+    .form .authentification a.linkedin-btn, .form .authentification a.google-btn{
+        width: 48%;
     }
 
     .contenu.active {
@@ -320,7 +331,11 @@ select{
 }
 
 
-@media screen and (max-width: 599px){
+@media screen and (min-width: 599px) and (max-width: 768px){
+
+    .form .authentification{
+        width: 100%;
+    }
 
     ul.menu{
         width: 90%;
@@ -331,8 +346,9 @@ select{
 
     }
 
-    .form .authentification a.linkedin-btn{
-        width: 50%;
+    .form .authentification a.linkedin-btn, .form .authentification a.google-btn{
+        width: 43%;
+        font-size: 15px;
     }
 
     .plusieurs-contenus{
@@ -383,4 +399,106 @@ select{
     }
 
     
+}
+
+@media screen and (min-width: 415px) and (max-width: 600px){
+
+    .form .authentification a span{
+        display: none;
+    }
+
+    .form .authentification .google-img{
+        width: 30px;
+        height: auto;
+    }
+
+    .form .authentification a.linkedin-btn, .form .authentification a.google-btn{
+        width: 20%;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 414px){
+
+    .form .authentification a span{
+        display: none;
+    }
+
+    .form .authentification .google-img{
+        width: 30px;
+        height: auto;
+    }
+
+    .form .authentification{
+        width: 100%;
+    }
+    ul.menu{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        /* box-shadow: none; */
+
+    }
+
+
+    .form .authentification a.linkedin-btn, .form .authentification a.google-btn{
+        width: 20%;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plusieurs-contenus{
+        width: 100%;
+        box-shadow: none;
+    }
+
+    ul.menu li, ul.menu li.active{
+        width: 50%;
+       
+        border-radius: 10px;
+     margin: 2px;
+        border: 1px solid #8924AD;
+        /* border: none; */
+
+    }
+    ul.menu li a{
+        border-radius: 10px;
+   }
+
+
+    ul.menu li.active {
+        border-radius: 10px;
+        box-shadow: none;
+        
+        
+
+       /* border: 1px solid #8924AD; */
+      
+        /* height: 50px;  
+        line-height: 30px;   */
+        /* background: none;*/
+    }
+    ul.menu li.active a{
+        color: white;
+        background: #8924AD;
+    }
+    ul.menu li:last-child{
+        background: none;
+        box-shadow: none;
+        /* border: solid 1px #8924AD; */
+        border-radius: 10px;
+    }
+
+    ul.menu li a{
+        border: none;
+        color: #8924AD;
+    }
+
 }

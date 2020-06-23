@@ -53,3 +53,64 @@
     /* margin: auto; */
 }
 
+@media screen and (max-width: 1024px){
+    .explication-entreprise{
+        width: 100%;
+      height: auto;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    figure#parcour-entreprise{
+width: 100%;
+height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+    }
+
+    #parcour-entreprise img{
+width: 100%;
+height: auto;
+margin: auto;
+    }
+
+    .ca-marche{
+        width: 100%;
+      
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ca-marche h2{
+        margin-bottom: 20px;
+    }
+    
+    
+    
+    .parcours-entreprise{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .btn-parcours-entreprise{
+        width: 200px;
+        height: 50px;
+        color: white;
+        background: #8924AD;
+        /* font-size: 30px; */
+        border: none;
+        border-radius: 10px;
+        margin-top: 200px;
+        font-size: 25px;
+    
+        /* margin: auto; */
+    }
+
+}

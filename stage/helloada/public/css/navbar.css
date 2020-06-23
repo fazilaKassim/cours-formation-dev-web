@@ -47,7 +47,7 @@ width: 100%;
 ul#menu-deroulant {
     display: flex;
     flex-direction: column;
-    padding-left: 2.5%;
+    padding-left: 1.5%;
 }
 
 li.link,
@@ -110,9 +110,9 @@ li.link-deroulant a {
     margin-top: 40px;
 }
 
-#menu-deroulant li:last-of-type {
-    margin-left: -5px;
-}
+/* #menu-deroulant li:last-of-type {
+    margin-left: -3px;
+} */
 
 
 
@@ -279,6 +279,11 @@ nav.fill ul li a:hover:after {
         z-index: 20;
 background: white;
     }
+a.logo-lien{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
     .menu-burger{
         display: flex;
@@ -354,6 +359,15 @@ background: white;
         background-position: 100% 50%;
     }
 }
+
+@media screen and (max-width:375px) {
+    .logo{
+        margin-left: 21px;
+    }
+    
+}
+
+
 
 
 

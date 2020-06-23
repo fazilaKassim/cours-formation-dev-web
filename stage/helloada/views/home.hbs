@@ -16,8 +16,9 @@
   {{#each js}}
   <script type="module" src="/js/{{this}}.js"></script>
   <script type="module" src="/js/inscription.js"></script>
-  <script type="module" src="/js/menu.js"></script>
+  {{!-- <script type="module" src="/js/menu.js"></script> --}}
   <script type="module" src="/js/Entreprises.js"></script>
+  
   {{/each}}
 
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -36,6 +37,25 @@
         $("nav ul").toggleClass("active")
       })
     })
+
+
+    const navburger = (() => {
+    
+    const btnresponsive = document.querySelector('.burger');
+    //Un objet Element représentant le premier élément dans le document qui corresponde au selecteur css
+    const nav = document.querySelector('.nav-links');
+        
+    const navLinks = document.querySelectorAll('.nav-links li');
+    
+    btnresponsive.addEventListener('click', () => {
+         
+    //     lancera les animation css
+          btnresponsive.classList.toggle('active');
+         nav.classList.toggle('nav-active');
+     });    
+    });
+    
+    navburger();
   </script>
 </head>
 
@@ -50,8 +70,8 @@
     </figure>
     {{/if}}
     {{#if isLoggedIn}}
-    <figure>
-      <a href="/" class="logo"><img src="/img/logo-connexion.png" style="width: 150px; margin-top: 30px;"
+    <figure class="logo">
+      <a href="/" class="logo-connecter"><img src="/img/logo-connexion.png" class="logo-img" style="width: 150px;"
           alt="logo"></a>
     </figure>
     {{/if}}
