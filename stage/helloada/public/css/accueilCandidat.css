@@ -1,4 +1,4 @@
-.accueil-candidat {
+.accueil-candidat, .accueil-entreprise {
     width: 70%;
     height: 300px;
     display: flex;
@@ -68,7 +68,7 @@ height: auto;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px){
-    .accueil-candidat{
+    .accueil-candidat, .accueil-entreprise{
         width: 100%;
     }
 
@@ -88,7 +88,16 @@ height: auto;
         align-items: center;
     }
 
-    .accueil-candidat .secteur-activite{
+    .accueil-entreprise{
+        width: 50%;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .accueil-candidat .secteur-activite, .accueil-entreprise .secteur-activite{
         /* margin: 5px; */
         width: 150px;
         height: 150px;
@@ -98,7 +107,7 @@ height: auto;
         margin-top: -400px;
     }
 
-    .filtre{
+    .filtre, .fiche-candidat{
         position: relative;
         top: -350px;
     }
@@ -113,6 +122,12 @@ height: auto;
 
     }
 
+    .accueil-entreprise{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 100px 0;
+    }
     
     span.separation{
         margin-top: -400px;
@@ -120,7 +135,7 @@ height: auto;
     }
 
 
-    .accueil-candidat .secteur-activite{
+    .accueil-candidat .secteur-activite, .accueil-entreprise .secteur-activite{
         width: 125px;
         height: 125px;
         font-size: 13px;
@@ -136,8 +151,15 @@ height: auto;
         margin: 80px 10% 150px;
 
     }
+
+    .accueil-entreprise{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 80px 0 150px;
+    }
     
-    .accueil-candidat .secteur-activite{
+    .accueil-candidat .secteur-activite, .accueil-entreprise .secteur-activite{
         width: 100px;
         height: 100px;
         font-size: 13px;
@@ -148,7 +170,7 @@ height: auto;
         margin-top: -450px;
     }
 
-    .filtre{
+    .filtre, .fiche-candidat{
         position: relative;
         top: -450px;
     }

@@ -16,6 +16,20 @@
     
 }
 
+.connexion h1{
+    font-weight: 600;
+}
+
+.input-connection::placeholder{
+    color: black;
+}
+
+.signin-background{
+    background-image: url(/img/marbre-rose.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .connexion{
     height: calc(100vh - 300px);
 }
@@ -91,7 +105,9 @@ form div.authentification-rs{
 height: 30px;
 margin-top: 30px;
 }
-
+form.connexion{
+    width: 70%;
+}
 
 div.authentification-rs a{
  
@@ -136,7 +152,10 @@ div.trait hr{
 
 @media screen and  (max-width: 414px){
 
-
+    form.connexion{
+        width: 100%;
+    }
+    
     .connexion{
         height: calc(100vh);
         width: 100%;
@@ -153,12 +172,12 @@ div.trait-responsive{
     width:80%;
     justify-content: center;
     align-items: center;
-margin: 3%;
-
+margin: 5%;
+font-size: 12px;
 }
 
-div.trait hr{
-    width:30%;
+div.trait-responsive hr{
+    width: 20%;
     height: 1px;
 
 } 
@@ -168,6 +187,8 @@ form div.authentification-rs{
 height: 30px;
 
 }
+
+
 
 div.authentification-rs a{
  

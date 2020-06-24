@@ -1,93 +1,103 @@
-<ul class="menu">
-    <li class="active"><a href="signup" id="btnC"> Candidat</a></li>
-    <li><a href="signupEntreprise">Entreprise</a></li>
-</ul>
+<main class="signup-main">
+    <div class="signup-img">
 
 
-<div class="plusieurs-contenus">
-    <div class="contenu" id="entreprise">
+
+        <ul class="menu">
+            <li class="active"><a href="signup" id="btnC"> Candidat</a></li>
+            <li><a href="signupEntreprise">Entreprise</a></li>
+        </ul>
 
 
-        <form action="/signupEntreprise" method="post" enctype="multipart/form-data" class="form" id="formEntreprise">
-           <div class="authentification">
-            <a class="google-btn" href="/auth/google"><img class="google-img" src="/img/google.png" alt="google"> <span> S'inscrire avec Google</span></a>
-            <span>ou</span>
-            
-            <a class="linkedin-btn" href="/auth/linkedin"><img class="linkedin-img" src="/img/linkedin.jpeg"
-                    alt="linkedin"> <span> S'inscrire avec Linkedin</span></a></div>
-
-            <label class="label" for="input-name"></label>
-            <input id="input-entreprise" class="input" type="text" placeholder="Nom de l'entreprise"
-                name="nomEntreprise" />
+        <div class="plusieurs-contenus">
+            <div class="contenu" id="entreprise">
 
 
-            <label class="label " for="tailleEntreprise"></label>
-            <select name="tailleEntreprise" id="tailleEntreprise" class="select">
-                <optgroup label="Taille de l'entreprise" name="tailleEntreprise">
-                    <option value="micro" id="">Micro-entreprise</option>
-                    <option value="trespetite" id="">Très petite entreprise</option>
-                    <option value="petite" id="">Petite entreprise</option>
-                    <option value="moyenne" id="">Moyenne entreprise</option>
-                    <option value="grande" id="">Grande entreprise</option>
-                    <option value="tresgrande" id="">Très grande entreprise</option>
-                </optgroup>
-            </select>
+                <form action="/signupEntreprise" method="post" enctype="multipart/form-data" class="form"
+                    id="formEntreprise">
+                    <div class="authentification">
+                        <a class="google-btn" href="/auth/google"><img class="google-img" src="/img/google.png"
+                                alt="google"> <span> Google</span></a>
+                        <span>ou</span>
 
-            <label class="label" for="input-secteur"></label>
-            <input id="input-secteur" class="input" type="text" placeholder="Secteur d'activité"
-                name="secteurActivite" />
+                        <a class="linkedin-btn" href="/auth/linkedin"><img class="linkedin-img" src="/img/linkedin.jpeg"
+                                alt="linkedin"> <span> Linkedin</span></a></div>
 
-            <label class="label" for="pitch"></label>
-            <textarea name="pitch" id="pitch" cols="30" rows="10" placeholder="Pitch"></textarea>
+                    <label class="label" for="input-name"></label>
+                    <input id="input-entreprise" class="input" type="text" placeholder="Nom de l'entreprise"
+                        name="nomEntreprise" />
 
 
-            <label for="codePostale" class="label"></label>
-            <input type="text" id="codePostale" class="input" name="codePostale" placeholder="Code postal">
+                    <label class="label " for="tailleEntreprise"></label>
+                    <select name="tailleEntreprise" id="tailleEntreprise" class="select">
+                        <optgroup label="Taille de l'entreprise" name="tailleEntreprise">
+                            <option value="micro" id="">Micro-entreprise</option>
+                            <option value="trespetite" id="">Très petite entreprise</option>
+                            <option value="petite" id="">Petite entreprise</option>
+                            <option value="moyenne" id="">Moyenne entreprise</option>
+                            <option value="grande" id="">Grande entreprise</option>
+                            <option value="tresgrande" id="">Très grande entreprise</option>
+                        </optgroup>
+                    </select>
 
-            <label for="ville" class="label"></label>
-            <input type="text" id="ville" class="input" name="ville" placeholder="Ville">
+                    <label class="label" for="input-secteur"></label>
+                    <input id="input-secteur" class="input" type="text" placeholder="Secteur d'activité"
+                        name="secteurActivite" />
+
+                    <label class="label" for="pitch"></label>
+                    <textarea name="pitch" id="pitch" cols="30" rows="10" placeholder="Pitch"></textarea>
 
 
-            <label for="poste" class="label"></label>
-            <input type="text" id="poste" class="input" name="poste" placeholder="Les postes ouverts">
+                    <label for="codePostale" class="label"></label>
+                    <input type="text" id="codePostale" class="input" name="codePostale" placeholder="Code postal">
+
+                    <label for="ville" class="label"></label>
+                    <input type="text" id="ville" class="input" name="ville" placeholder="Ville">
 
 
-            <label for="niveauExperience" class="label"></label>
-            <select name="niveauExperience" id="niveauExperience" class="select">
+                    <label for="poste" class="label"></label>
+                    <input type="text" id="poste" class="input" name="poste" placeholder="Les postes ouverts">
 
-                <optgroup label="Niveau d'expèriences" name="niveauExperience">
 
-                    <option value="stagiaires" id="">Stagiaires</option>
-                    <option value="juniors" id="">Juniors</option>
-                    <option value="experimentes" id="">Expérimentés</option>
-                </optgroup>
-            </select>
+                    <label for="niveauExperience" class="label"></label>
+                    <select name="niveauExperience" id="niveauExperience" class="select">
 
-            <label class="label" for="input-name"></label>
-            <input id="input-name" class="input" type="text" placeholder=" nom" name="nom" />
+                        <optgroup label="Niveau d'expèriences" name="niveauExperience">
 
-            <label class="label" for="input-lastname"></label>
-            <input id="input-lastname" class="input" type="text" placeholder=" Prénom" name="prenom" />
+                            <option value="stagiaires" id="">Stagiaires</option>
+                            <option value="juniors" id="">Juniors</option>
+                            <option value="experimentes" id="">Expérimentés</option>
+                        </optgroup>
+                    </select>
 
-            <label class="label" for="input-email"></label>
-            <input id="input-email" class="input" type="email" placeholder="Email" name="email">
+                    <label class="label" for="input-name"></label>
+                    <input id="input-name" class="input" type="text" placeholder=" nom" name="nom" />
 
-            <label class="label" for="input-password"></label>
-            <input id="input-password" class="input" type="password" placeholder="Votre mot de passe" name="password">
+                    <label class="label" for="input-lastname"></label>
+                    <input id="input-lastname" class="input" type="text" placeholder=" Prénom" name="prenom" />
 
-            <label class="label" for="input-password"></label>
-            <input id="passwordConfirme" class="input" type="password" placeholder="Confimer le mot de passe"
-                name="passwordConfirme">
+                    <label class="label" for="input-email"></label>
+                    <input id="input-email" class="input" type="email" placeholder="Email" name="email">
 
-            <div class="valider">
-                <input type="checkbox" id="conditions" name="conditions" checked>
-                <label for="cgv" class="valide"> <a href="">voir les conditions
-                        générales</a></label>
+                    <label class="label" for="input-password"></label>
+                    <input id="input-password" class="input" type="password" placeholder="Votre mot de passe"
+                        name="password">
+
+                    <label class="label" for="input-password"></label>
+                    <input id="passwordConfirme" class="input" type="password" placeholder="Confimer le mot de passe"
+                        name="passwordConfirme">
+
+                    <div class="valider">
+                        <input type="checkbox" id="conditions" name="conditions" checked>
+                        <label for="cgv" class="valide"> <a href="">voir les conditions
+                                générales</a></label>
+                    </div>
+                    <button class="btn">S'inscrire</button>
+                </form>
+
+
+
             </div>
-            <button class="btn">S'inscrire</button>
-        </form>
-
-
-
+        </div>
     </div>
-</div>
+</main>

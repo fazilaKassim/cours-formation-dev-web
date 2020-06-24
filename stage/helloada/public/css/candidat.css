@@ -16,7 +16,7 @@
     padding: 50px;
 }
 
-div.numero-parcours{
+div.numero-parcours {
     width: 50px;
     height: 50px;
     background: #8924AD;
@@ -46,8 +46,8 @@ article.parcours {
     /* justify-content: space-around; */
     flex-wrap: wrap;
     margin-top: 100px;
-/* padding-left: 50px; */
-/* display: flex;
+    /* padding-left: 50px; */
+    /* display: flex;
 justify-content: center;
 align-items: center; */
 }
@@ -77,9 +77,9 @@ align-items: center; */
     border-radius: 10px;
     margin-right: 50px;
 
-} 
+}
 
-.btn-parcours a{
+.btn-parcours a {
     color: white;
     font-size: 25px;
 }
@@ -90,75 +90,77 @@ align-items: center; */
     justify-content: flex-end;
     align-items: flex-end;
 
-} 
-@media screen and (max-width: 1024px){
+}
+
+@media screen and (max-width: 1024px) {
     #parcours-candidat {
         width: 100%;
-      height: auto;
+        height: auto;
         display: flex;
         flex-direction: column;
-   
+
     }
-    
+
     .img-parcours {
-        width:100%;
-        height:200px;
+        width: 70%;
+        height: 200px;
         margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-margin-top: 10vh;
+        margin-top: 10vh;
         align-items: center;
     }
-    
+
     .img-parcours img {
         width: 100%;
         height: auto;
-   
+
     }
-      
+
     article.parcours {
         width: 100%;
         height: auto;
-     flex-direction: column;
+        flex-direction: column;
         display: flex;
         justify-content: center;
         align-items: center;
-    
+
     }
-    div.numero-parcours{
+
+    div.numero-parcours {
         width: 40px;
         height: 40px;
         background: #8924AD;
         color: white;
         border-radius: 5px;
-     
+
         display: flex;
         justify-content: center;
         align-items: center;
         margin-right: 5px;
         font-weight: bold;
     }
-    
+
     div.container-etape {
         display: flex;
         flex-direction: row;
         width: 90%;
-    
-    }
-  
-    
 
-    
+    }
+
+
+
+
     .container-etape h3 {
         line-height: 50px;
         width: 70%;
         font-size: 18px;
         font-weight: 400;
     }
-    
-    
-    
+
+
+
     .btn-parcours {
         width: 150px;
         height: 40px;
@@ -168,20 +170,46 @@ margin-top: 10vh;
         border: none;
         border-radius: 10px;
 
-   
-    
-    } 
-    
-    .btn-parcours a{
+
+
+    }
+
+    .btn-parcours a {
         color: white;
         font-size: 18px;
     }
-    
+
     #btn-parcour {
         width: 100%;
         margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    } }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media screen and (max-width: 414px){
+    .img-parcours{
+        width: 100%;
+    }
+
+    div.container-etape {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-left: 5px;
+
+    }
+
+
+
+
+    .container-etape h3 {
+        line-height: 50px;
+        width: 80%;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+}

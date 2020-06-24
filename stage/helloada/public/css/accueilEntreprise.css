@@ -10,8 +10,3 @@ section.profil, section.fiche-candidat{
     width: 50%;
 }
 
-@media screen and (min-width: 599px) and (max-width: 768){
-    #accueil-entreprises{
-          margin: 0;
-    }
-}

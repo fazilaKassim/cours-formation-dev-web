@@ -7,9 +7,23 @@
     flex-direction: column;
 }
 
+div.flex{
+    margin-top: 100px;
+}
+
 .profile article{
     width: 50%;
     margin-bottom: 15px;
+}
+
+.profile figure{
+    width: 20%;
+    height: 500px;
+}
+
+.profile figure img{
+    width: 100%;
+    height: auto;
 }
 
 .profile article p{
@@ -48,3 +62,73 @@
     margin-bottom: 10px;
 }
 
+@media screen and (min-width: 767px) and (max-width: 1024px){
+    .profile figure{
+        width: 35%;
+        height: 500px;
+    }
+    
+    .profile figure img{
+        width: 100%;
+        height: auto;
+    }
+
+    .profil-edit .form label{
+        text-align: start;
+        width: 20%;
+     }
+}
+
+@media screen and (min-width: 599px) and (max-width: 768px){
+    .profile article{
+        width: 70%;
+        margin-bottom: 15px;
+    }
+
+    .profile figure{
+        width: 50%;
+        height: 500px;
+    }
+    
+    .profile figure img{
+        width: 100%;
+        height: auto;
+    }
+    .profil-edit .form label{
+        text-align: start;
+        width: 25%;
+     }
+
+}
+
+@media screen and (min-width: 413px) and (max-width: 600px){
+    div.flex{
+        margin-top: 100px;
+    }
+
+    .profile figure{
+        width: 60%;
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 414px){
+    div.flex{
+        margin-top: 100px;
+    }
+
+    .profile article{
+        width: 85%;
+        margin-bottom: 15px;
+    }
+
+    .profile figure{
+        width: 90%;
+        height: 500px;
+    }
+
+    .profil-edit .form label{
+        text-align: start;
+        width: 25%;
+     }
+}

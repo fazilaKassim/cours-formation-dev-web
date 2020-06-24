@@ -20,9 +20,9 @@ body {
 }
 
 main{
-  padding: 130px 0;
+  padding: 100px 0;
   width: 100%;
-  /* height: calc(100vh - 100px); */
+  min-height: calc(100vh - 100px);
 }
 
 

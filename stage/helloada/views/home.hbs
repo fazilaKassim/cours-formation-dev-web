@@ -18,7 +18,7 @@
   <script type="module" src="/js/inscription.js"></script>
   {{!-- <script type="module" src="/js/menu.js"></script> --}}
   <script type="module" src="/js/Entreprises.js"></script>
-  
+
   {{/each}}
 
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -40,161 +40,161 @@
 
 
     const navburger = (() => {
-    
-    const btnresponsive = document.querySelector('.burger');
-    //Un objet Element représentant le premier élément dans le document qui corresponde au selecteur css
-    const nav = document.querySelector('.nav-links');
-        
-    const navLinks = document.querySelectorAll('.nav-links li');
-    
-    btnresponsive.addEventListener('click', () => {
-         
-    //     lancera les animation css
-          btnresponsive.classList.toggle('active');
-         nav.classList.toggle('nav-active');
-     });    
+
+      const btnresponsive = document.querySelector('.burger');
+      //Un objet Element représentant le premier élément dans le document qui corresponde au selecteur css
+      const nav = document.querySelector('.nav-links');
+
+      const navLinks = document.querySelectorAll('.nav-links li');
+
+      btnresponsive.addEventListener('click', () => {
+
+        //     lancera les animation css
+        btnresponsive.classList.toggle('active');
+        nav.classList.toggle('nav-active');
+      });
     });
-    
+
     navburger();
   </script>
 </head>
 
-<body>
-    {{!-- la caracasse front de votre app --}}
-    <div class="d1">
-        <div class="burger"><span class="nav-active"></span></div> 
- <div class="menu-burger">
-  {{#if isNotLoggedIn}}
-    <figure class="logo">
-      <a href="/"><img src="/img/logo.PNG" alt="logo"></a>
-    </figure>
-    {{/if}}
-    {{#if isLoggedIn}}
-    <figure class="logo">
-      <a href="/" class="logo-connecter"><img src="/img/logo-connexion.png" class="logo-img" style="width: 150px;"
-          alt="logo"></a>
-    </figure>
-    {{/if}}
-  <nav id="nav-burger" class="is-active nav-links">
-    <ul id="nav">
-      <li class="link-burger"><a href="https://helloada.fr/" target="new" class="link is-clickable">Concept</a></li>
-      {{!-- la caracasse front de votre app --}}
-      {{#unless isLoggedIn}}
-      <li class="link-burger"><a href="/signup" class="link is-clickable">S'inscrire</a></li>
-      <li class="link-burger"> <a href="/signin">Connexion Candidat</a></li>
-      <li class="link-burger"> <a href="/signinEntreprise">Connexion Entreprise</a></li>
-      {{/unless}}
+<body class="home-page">
+  {{!-- la caracasse front de votre app --}}
+  <div class="d1">
+    <div class="burger"><span class="nav-active"></span></div>
+    <div class="menu-burger">
+      {{#if isNotLoggedIn}}
+      <figure class="logo logo-home">
+        <a href="/"><img src="/img/logo.PNG" alt="logo"></a>
+      </figure>
+      {{/if}}
       {{#if isLoggedIn}}
-      <li class="link-burger"><a href="/profile" class="link is-clickable">profile</a></li>
-      {{#if candidatUser}}
-      <li class="link-burger"><a href="/accueilCandidat" class="link is-clickable">Offre</a></li>
+      <figure class="logo logo-home">
+        <a href="/" class="logo-connecter"><img src="/img/logo-connexion.png" class="logo-img" style="width: 150px;"
+            alt="logo"></a>
+      </figure>
       {{/if}}
-      {{#if entrepriseUser}}
-      <li class="link-burger"><a href="/accueilEntreprise" class="link is-clickable">Candidat</a></li>
+      <nav id="nav-burger" class="is-active nav-links">
+        <ul id="nav">
+          <li class="link-burger"><a href="https://helloada.fr/" target="new" class="link is-clickable">Concept</a></li>
+          {{!-- la caracasse front de votre app --}}
+          {{#unless isLoggedIn}}
+          <li class="link-burger"><a href="/signup" class="link is-clickable">S'inscrire</a></li>
+          <li class="link-burger"> <a href="/signin">Connexion Candidat</a></li>
+          <li class="link-burger"> <a href="/signinEntreprise">Connexion Entreprise</a></li>
+          {{/unless}}
+          {{#if isLoggedIn}}
+          <li class="link-burger"><a href="/profile" class="link is-clickable">profile</a></li>
+          {{#if candidatUser}}
+          <li class="link-burger"><a href="/accueilCandidat" class="link is-clickable">Offre</a></li>
+          {{/if}}
+          {{#if entrepriseUser}}
+          <li class="link-burger"><a href="/accueilEntreprise" class="link is-clickable">Candidat</a></li>
+          {{/if}}
+          {{#if isAdmin}}
+          <li class="link-burger"><a href="/dashboard" class="link is-clickable">dashboard</a></li>
+          {{/if}}
+          <li class="link-burger"><a href="/signout" class="link is-clickable">Se déconnecter</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+    </div>
+    <header class="header-main">
+      {{#if isNotLoggedIn}}
+      <figure class="logo">
+        <a href="/"><img src="/img/logo.PNG" alt="logo"></a>
+      </figure>
       {{/if}}
-      {{#if isAdmin}}
-      <li class="link-burger"><a href="/dashboard" class="link is-clickable">dashboard</a></li>
+      {{#if isLoggedIn}}
+      <figure>
+        <a href="/" class="logo"><img src="/img/logo-connexion.png" style="width: 150px; margin-top: 30px;"
+            alt="logo"></a>
+      </figure>
       {{/if}}
-      <li class="link-burger"><a href="/signout" class="link is-clickable">Se déconnecter</a></li>
-      {{/if}}
-    </ul>
-  </nav>
-  </div>
-        <header class="header-main">
-            {{#if isNotLoggedIn}}
-    <figure class="logo">
-      <a href="/"><img src="/img/logo.PNG" alt="logo"></a>
-    </figure>
-    {{/if}}
-    {{#if isLoggedIn}}
-    <figure>
-      <a href="/" class="logo"><img src="/img/logo-connexion.png" style="width: 150px; margin-top: 30px;"
-          alt="logo"></a>
-    </figure>
-    {{/if}}
-    <nav id="navbar" class="stroke">
-      <ul id="nav" class="">
-        <li class="link"><a href="/" class="link is-clickable">Concept</a></li>
+      <nav id="navbar" class="stroke">
+        <ul id="nav" class="">
+          <li class="link"><a href="/" class="link is-clickable">Concept</a></li>
 
-        {{!-- <li class="link"><a href="/about" class="link is-clickable">about</a></li>
+          {{!-- <li class="link"><a href="/about" class="link is-clickable">about</a></li>
             <li class="link"><a href="/products" class="link is-clickable">products</a></li>
             <li class="link"><a href="/contact" class="link is-clickable">contact</a></li> --}}
-        {{#unless isLoggedIn}}
-        <li class="link"><a href="/signup" class="link is-clickable">S'inscrire</a></li>
-        <li class="link"><a href="" class="link is-clickable">Se connecter</a>
-          <ul id="menu-deroulant">
-            <li class="link-deroulant derouler"> <a href="/signin">Candidat</a></li>
-            <li class="link-deroulant derouler"> <a href="/signinEntreprise">Entreprise</a></li>
-          </ul>
-        </li>
-        {{/unless}}
-        {{#if isLoggedIn}}
-        <li class="link"><a href="/profile" class="link is-clickable">profile</a></li>
-        {{#if candidatUser}}
-        <li class="link"><a href="/accueilCandidat" class="link is-clickable">Offre</a></li>
-        {{/if}}
-        {{#if entrepriseUser}}
-        <li class="link"><a href="/accueilEntreprise" class="link is-clickable">Candidat</a></li>
-        {{/if}}
-        {{#if isAdmin}}
-        <li class="link"><a href="/dashboard" class="link is-clickable">dashboard</a></li>
-        {{/if}}
-        <li class="link"><a href="/signout" class="link is-clickable">Se déconnecter</a></li>
-        {{/if}}
-      </ul>
-    </nav>
-  </header>
+          {{#unless isLoggedIn}}
+          <li class="link"><a href="/signup" class="link is-clickable">S'inscrire</a></li>
+          <li class="link"><a href="" class="link is-clickable">Se connecter</a>
+            <ul id="menu-deroulant">
+              <li class="link-deroulant derouler"> <a href="/signin">Candidat</a></li>
+              <li class="link-deroulant derouler"> <a href="/signinEntreprise">Entreprise</a></li>
+            </ul>
+          </li>
+          {{/unless}}
+          {{#if isLoggedIn}}
+          <li class="link"><a href="/profile" class="link is-clickable">profile</a></li>
+          {{#if candidatUser}}
+          <li class="link"><a href="/accueilCandidat" class="link is-clickable">Offre</a></li>
+          {{/if}}
+          {{#if entrepriseUser}}
+          <li class="link"><a href="/accueilEntreprise" class="link is-clickable">Candidat</a></li>
+          {{/if}}
+          {{#if isAdmin}}
+          <li class="link"><a href="/dashboard" class="link is-clickable">dashboard</a></li>
+          {{/if}}
+          <li class="link"><a href="/signout" class="link is-clickable">Se déconnecter</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+    </header>
 
-        <main>
-            {{> flashMessage}}
-            {{!-- hbs va insérer dans body le contenu du render courant --}}
-            <div id="accueil">
+    <main class="home-main">
+      {{> flashMessage}}
+      {{!-- hbs va insérer dans body le contenu du render courant --}}
+      <div id="accueil">
 
-                <a href="/candidat"><button class="btn-accueil" id="btnCandidat"> <span>Candidat </span></button></a>
+        <a href="/candidat"><button class="btn-accueil" id="btnCandidat"> <span>Candidat </span></button></a>
 
-                <figure class="img-accueil">
-                    <img src="/img/image-accueil.svg" alt="accueil">
-                </figure>
+        <figure class="img-accueil">
+          <img src="/img/image-accueil.svg" alt="accueil">
+        </figure>
 
-                <a href="/entreprise"><button class="btn-accueil" id="btnEntreprise"> <span>
-                            Entreprise</span></button></a>
-            </div>
-        </main>
-    </div>
-    <footer>
-        <section id="footer">
-            <article class="footer"> <a href="https://helloada.tech/" target="new">La communaut&eacute; HELLOADA</a>
-                <li><a href="mailto:contact@helloada.fr">Contact</a></li>
-            </article>
-            <article class="footer">
-                <ul>
-                    <li><a href="/condition">Conditions d'utilisation</a></li>
-                    <li><a href="/mention-legal">Mentions legales</a></li>
-                </ul>
-            </article>
-            <article class="footer">
-                <ul>
-                    <li>
-                        <ul class="reseaux">
-                            <li><a href="https://www.facebook.com/helloadatech/" target="new"><img
-                                        src="/img/facebook.jpeg" alt="facebook"></a>
-                            </li>
-                            <li><a href="https://twitter.com/Helloadatech" target="new"><img src="/img/twitter.jpeg"
-                                        alt="twitter"></a></li>
-                            <li><a href="https://www.instagram.com/helloadatech/" target="new"><img
-                                        src="/img/instagram.jpeg" alt="instagram"></a>
-                            </li>
-                            <li><a href="https://www.linkedin.com/company/helloada-tech/" target="new">
-                                    <img src="/img/linkedin.jpeg" alt="linkedin"></a></li>
-                        </ul>
-                    </li>
+        <a href="/entreprise"><button class="btn-accueil" id="btnEntreprise"> <span>
+              Entreprise</span></button></a>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <section id="footer">
+      <article class="footer"> <a href="https://helloada.tech/" target="new">La communaut&eacute; HELLOADA</a>
+        <li><a href="mailto:contact@helloada.fr">Contact</a></li>
+      </article>
+      <article class="footer">
+        <ul>
+          <li><a href="/condition">Conditions d'utilisation</a></li>
+          <li><a href="/mention-legal">Mentions legales</a></li>
+        </ul>
+      </article>
+      <article class="footer">
+        <ul>
+          <li>
+            <ul class="reseaux">
+              <li><a href="https://www.facebook.com/helloadatech/" target="new"><img src="/img/facebook.jpeg"
+                    alt="facebook"></a>
+              </li>
+              <li><a href="https://twitter.com/Helloadatech" target="new"><img src="/img/twitter.jpeg"
+                    alt="twitter"></a></li>
+              <li><a href="https://www.instagram.com/helloadatech/" target="new"><img src="/img/instagram.jpeg"
+                    alt="instagram"></a>
+              </li>
+              <li><a href="https://www.linkedin.com/company/helloada-tech/" target="new">
+                  <img src="/img/linkedin.jpeg" alt="linkedin"></a></li>
+            </ul>
+          </li>
 
-                </ul>
-            </article>
-        </section>
-    </footer>
+        </ul>
+      </article>
+    </section>
+  </footer>
 
-    {{!-- 
+  {{!-- 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://davidstutz.de/bootstrap-multiselect/dist/js/bootstrap-multiselect.js"></script>
 <link href="https://davidstutz.de/bootstrap-multiselect/docs/css/bootstrap-3.3.2.min.css" rel="stylesheet"/>
