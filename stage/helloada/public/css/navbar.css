@@ -12,11 +12,17 @@ header {
     /* box-shadow: black 0 2px 2px; */
 }
 
+/* html,
+body {
+    overflow-x: hidden;
+    height: 100%;
+}   */
+
 .logo {
     padding: 30px;
 }
 
-.logo img{
+.logo img {
     width: 200px;
     height: auto;
 }
@@ -30,19 +36,18 @@ nav#navbar {
 
 }
 
-.menu-burger{
+.menu-burger {
     display: none;
 }
 
 ul#nav {
-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:space-around;
-     align-items: center 
-
-} 
+    justify-content: space-around;
+    align-items: center
+}
 
 ul#menu-deroulant {
     display: flex;
@@ -58,11 +63,11 @@ li.link-deroulant {
 
 }
 
-li.link-deroulant a{
+li.link-deroulant a {
     background: white;
 }
 
-li.derouler a{
+li.derouler a {
     background: none;
 }
 
@@ -77,12 +82,13 @@ li.link-deroulant a {
     /*for capitalisation of letters */
     left: auto;
     /* background: white; */
-    padding-bottom: 10px;}
+    padding-bottom: 10px;
+}
 
 #nav ul li {
 
     display: inherit;
-  
+
 }
 
 #nav ul {
@@ -126,51 +132,55 @@ header.white {
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
-  transition: all .5s;
+    transition: all .5s;
 }
 
 nav.stroke ul li a,
 nav.fill ul li a {
-  position: relative;
+    position: relative;
 }
+
 nav.stroke ul li a:after,
 nav.fill ul li a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: '.';
-  color: transparent;
-  background:#8924AD ;
-  height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #8924AD;
+    height: 3px;
 
 }
+
 nav.stroke ul li a:hover:after {
-  width: 100%;
+    width: 100%;
 }
 
 nav.fill ul li a {
-  transition: all 2s;
+    transition: all 2s;
 }
 
 nav.fill ul li a:after {
-  text-align: left;
-  content: '.';
-  margin: 0;
-  opacity: 0;
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
 }
+
 nav.fill ul li a:hover {
-  color: #fff;
-  z-index: 1;
+    color: #fff;
+    z-index: 1;
 }
+
 nav.fill ul li a:hover:after {
-  z-index: -10;
-  animation: fill 1s forwards;
-  -webkit-animation: fill 1s forwards;
-  -moz-animation: fill 1s forwards;
-  opacity: 1;
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
 }
 
 
@@ -256,47 +266,45 @@ nav.fill ul li a:hover:after {
 
 @media screen and (max-width:768px) {
 
+    html,
+    body {
+        overflow-x: hidden;
+        height: 100%;
+    }
+    
 
-    /* body{
-        overflow: hidden;
-    } */
-
-    #navbar{
+    header, #navbar {
         display: none;
     }
 
-    .is-active{
+    .is-active {
         display: block;
         z-index: 10;
     }
 
-    header {
-        display: none;
-    }
-
-    .logo{
+    .logo {
         position: absolute;
         z-index: 20;
-background: white;
+        /* background: white; */
+        /* position: relative; */
     }
-a.logo-lien{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
-    .menu-burger{
+    a.logo-lien {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .menu-burger {
         display: flex;
         justify-content: center;
         align-items: center;
         /* position: fixed; */
+        margin-bottom: 15px;
+        
     }
 
-    /* header.white {
-        display: none;
-    } */
-
-    .nav-links ul li{
+    .nav-links ul li {
         display: inline-block;
         display: flex;
         flex-direction: column;
@@ -304,11 +312,11 @@ a.logo-lien{
         justify-content: center;
         align-items: center;
         height: calc(92vh / 5);
-     
+
     }
-    
+
     .nav-links {
-    position: absolute;
+        position: absolute;
         left: 0;
         height: 92vh;
         top: 8vh;
@@ -316,117 +324,61 @@ a.logo-lien{
         display: flex;
         /* flex-direction: column; */
         align-items: center;
-        width:100%;
+        width: 100%;
         transform: translateX(-100%);
         transition: transform .5s ease-in-out;
-}
-
-.nav-links ul li a{
-    color: #8924AD;
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.menu-burger #nav-burger ul li:hover{
-    background:  linear-gradient(304deg, rgba(58,12,163,1) 0%, rgba(137,36,173,1) 25%, rgba(137,36,173,1) 48%, rgba(137,36,173,1) 62%, rgba(58,12,163,1) 100%);
-    background-size: 400% 400%;
-    animation: degrade 5s ease-in-out infinite;
-}
-
-.menu-burger #nav-burger ul li:hover a{
-    color: white;
-}
-
-
-/* header {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    background: linear-gradient(341deg, rgba(58, 185, 175, 1) 0%, rgba(21, 33, 166, 1) 15%, rgba(37, 146, 208, 1) 27%, rgba(66, 175, 168, 1) 40%, rgba(0, 153, 233, 1) 55%, rgba(0, 85, 185, 1) 69%, rgba(47, 132, 230, 1) 81%, rgba(45, 126, 220, 1) 91%, rgba(23, 82, 151, 1) 99%);
-    background-size: 400% 400%;
-    animation: degrade 15s ease-in-out infinite;
-} */
-
-@keyframes degrade {
-
-    0%,
-    100% {
-        background-position: 0% 50%
     }
 
-    50% {
-        background-position: 100% 50%;
+    .nav-links ul li a {
+        color: #8924AD;
+        font-weight: 500;
+        font-size: 20px;
     }
-}
 
-@media screen and (max-width:375px) {
-    .logo{
-        margin-left: 21px;
+    .menu-burger #nav-burger ul li:hover {
+        background: linear-gradient(304deg, rgba(58, 12, 163, 1) 0%, rgba(137, 36, 173, 1) 25%, rgba(137, 36, 173, 1) 48%, rgba(137, 36, 173, 1) 62%, rgba(58, 12, 163, 1) 100%);
+        background-size: 400% 400%;
+        animation: degrade 5s ease-in-out infinite;
     }
-    
-}
 
+    .menu-burger #nav-burger ul li:hover a {
+        color: white;
+    }
 
+    @keyframes degrade {
 
+        0%,
+        100% {
+            background-position: 0% 50%
+        }
 
+        50% {
+            background-position: 100% 50%;
+        }
+    }
 
+    #nav ul li {
 
+        display: inherit;
 
+    }
 
+    #nav ul {
+        position: absolute;
+        left: -999em;
+        text-align: left;
+        z-index: 1000;
+    }
 
+    #nav li:not(hover) ul {
+        left: auto;
+    }
 
-
-
-
-
-
-
-
-#nav ul li {
-
-    display: inherit;
-  
-}
-
-#nav ul {
-    position: absolute;
-    left: -999em;
-    text-align: left;
-    z-index: 1000;
-}
-
-#nav li:not(hover) ul {
-    left: auto;
-}
-
-/* #nav li a:hover {
-    border-bottom: 3px solid #8924AD;
-    transition: .5s;
-} */
-
-/* #menu-deroulant li {
-    margin-top: 30px;
-    background: white;
-} */
-
-/* #menu-deroulant li:first-of-type {
-    
-} */
-/* 
-#menu-deroulant li:last-of-type {
-    margin-left: -5px;
-} */
-
-    .nav-active{
+    .nav-active {
         transform: translateX(0%)
     }
-    
-    /* body{background: green;
-    overflow-x: hidden
-    } */
 
-    
+
     .burger {
         display: block;
         width: 42px;
@@ -466,25 +418,49 @@ a.logo-lien{
         transform: translateY(10px)
     }
 
-    
-/*premier span*/
+
+    /*premier span*/
     .burger.active span::before {
         transform: translateY(0px) rotateZ(45deg)
     }
-/*2eme span*/            
+
+    /*2eme span*/
     .burger.active span {
         background: transparent
     }
-/*dernier span*/
+
+    /*dernier span*/
     .burger.active span::after {
         transform: translateY(0px) rotateZ(-45deg)
     }
-    
-    @keyframes navLinkFade{
-        from{opacity: 0;
-        transform: translateX(50px)}
-        
-        to{opacity: 1;
-        transform: translateX(0px)}
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0px)
+        }
     }
+}
+
+
+
+
+
+
+@media screen and (max-width: 414px) {
+    #nav-burger{
+        margin-top: 6px;
+        /* overflow-y: hidden; */
+        height: 91vh;
+    } 
+
+    .logo{
+        margin-left: 10px;
+    }
+
 }
